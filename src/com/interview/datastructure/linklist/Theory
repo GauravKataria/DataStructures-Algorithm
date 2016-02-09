@@ -1,0 +1,21 @@
+Linked List
+- store data non contiguous location
+
+Array Limitations
+- limited size
+- insert and delete are expensive
+
+link-list dis-advantages
+- random access not allowed, need to iterate
+- more memory needed to store pointer
+- array provide better caching
+
+Node : while solving problems think for all corner cases
+
+example :
+	* swap node not data
+    This may look a simple problem, but is interesting question as it has following cases to be handled.
+	1) x and y may or may not be adjacent.
+ 	2) Either x or y may be a head node.
+ 	3) Either x or y may be last node.
+ 	4) x and/or y may not be present in linked list.
