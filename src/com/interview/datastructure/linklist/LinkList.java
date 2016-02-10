@@ -41,15 +41,17 @@ public class LinkList {
 		System.out.println();
 	}
 	
-	public void insertFront(Node node) {
+	public Node insertFront(Node node) {
 		if(head==null){
 			head=node;
-			return;
+			return node;
 		}
 		
 		Node temp = head;
 		head = node;
 		head.next = temp;
+		
+		return node;
 	}
 	
 	public void insertBack(Node node) {

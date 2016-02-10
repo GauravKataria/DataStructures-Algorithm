@@ -22,8 +22,8 @@ Linklist
 	- recursion 
 	- iterative
 - Add two number represented by LinkList
-
 - Loop detect and removal
+
 - Reverse Linklist of given size
 - MergeSort Linklist
 - Rotate Linklist
