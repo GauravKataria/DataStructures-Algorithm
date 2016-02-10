@@ -20,7 +20,7 @@ Linklist
 	- iterative
 - MergeSorted Linklist
 	- recursion 
-	- iterative 
+	- iterative
 - Add two number represented by LinkList
 
 - Loop detect and removal
