@@ -18,25 +18,14 @@ package com.interview.datastructure.linklist;
  *
  */
 
-class Node{
-	int data;
-	Node next;
-	
-	Node(){}
-	
-	Node(int data){
-		this.data = data;
-		this.next = null;
-	}
-}
-
 public class LinkList {
-	Node head = null;
+	public Node head = null;
 	
 	public void printLinkedList(){
-		while(head!=null){
-			System.out.print(head.data + " ");
-			head = head.next;
+		Node temp = head;
+		while(temp!=null){
+			System.out.print(temp.data + " ");
+			temp = temp.next;
 		}
 		System.out.println();
 	}
@@ -87,18 +76,23 @@ public class LinkList {
 		}
 		if(head.data==node.data) {
 			head = head.next;
-			System.out.println("Successful!");
+			//System.out.println("Successful!");
 			return;
 		}
+		
 		Node temp = head;
-		while(temp.next!=null) {
+		do {
 			if(temp.next.data==node.data) {
+				if(temp.next.data==head.data) {
+					head=head.next;
+				}
 				temp.next=temp.next.next;
 				System.out.println("Successful!");
 				return;
 			}
 			temp=temp.next;
-		}
+		} while(temp!=null);
+		
 		System.out.println("Node not present, deletion failed!");
 	}
 	

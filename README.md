@@ -1,8 +1,8 @@
 # DataStructures-Algorithm
 
-This repository covers :
+This repository covers : 
 
-Linklist
+# Linklist
 - Create Linklist
 - Insert Linklist
 	- at front
@@ -28,11 +28,13 @@ todo
 - MergeSort Linklist
 - Rotate Linklist
 
-Circular Linklist
+
+# Circular Linklist
 - Insert and Traverse cirular linklist
 - Split circular linklist into half
 
-Doubly Linklist
+
+# Doubly Linklist
 - Insert
 	- at front
 	- at back
@@ -44,3 +46,56 @@ todo
 - Quick Sort
 - Merge Sort
 - Greatest tree-recursion 
+
+
+# Stack
+- Create Stack
+	- using Linklist
+	- using Array
+- Infix to Postfix
+- Evaluate Postfix
+- Reverse stack recursion (t:works on:insert at bottom)
+- Next greater element (t*)
+- Stock Span Problem (t*)
+- Impl queue using stack
+todo
+- Sort stack using recursion
+- Special Stack that do getMin in O(1)
+- Design a stack with operations on middle element
+- Implement k stacks in a single array?
+
+
+# Queue
+todo
+- Create Queue
+- Priority Queue
+- Deque
+- Implement Stack using queue
+- Find the first circular tour that visits all petrol pumps
+- Maximum of all subarrays of size k
+- An Interesting Method to Generate Binary Numbers from 1 to n
+- Implement k Queues in a single array?
+
+# Binary Tree
+
+
+# Binary Search Tree
+
+
+# Heap
+
+
+# Hashing
+
+
+# Graph
+
+
+# Array
+
+
+# Matrix
+
+
+# Advance Data Structure
+
