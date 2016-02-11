@@ -1,3 +1,5 @@
+********************************************************************************************************
+
 Linked List
 - store data non contiguous location
 
@@ -19,3 +21,23 @@ example :
  	2) Either x or y may be a head node.
  	3) Either x or y may be last node.
  	4) x and/or y may not be present in linked list.
+
+********************************************************************************************************
+
+Circular Linklist
+- store element is cycle form
+- can be single or doubly circular linklist
+- use to impl queue as when it is impl with non circular linklist 2 node need to be stored for same
+- doubly linklist is used in implementaion of fibonacci heaps 
+
+
+********************************************************************************************************
+
+Doubly Linklist
+Advantage
+- both side traverse (makes delete, insert operation easier)
+Disadvantage
+- extra space to store 2 pointer
+- extra operation to update extra pointer
+
+********************************************************************************************************

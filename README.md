@@ -23,21 +23,24 @@ Linklist
 	- iterative
 - Add two number represented by LinkList
 - Loop detect and removal
-
+todo
 - Reverse Linklist of given size
 - MergeSort Linklist
 - Rotate Linklist
 
 Circular Linklist
-- 
-- 
-- 
-- 
+- Insert and Traverse cirular linklist
+- Split circular linklist into half
 
 Doubly Linklist
-- 
-- 
-- 
-- 
-- 
-- 
+- Insert
+	- at front
+	- at back
+	- before
+	- after
+- Delete
+- Reverse 
+todo
+- Quick Sort
+- Merge Sort
+- Greatest tree-recursion 
