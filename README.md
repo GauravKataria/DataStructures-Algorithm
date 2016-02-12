@@ -42,7 +42,7 @@ todo
 	- after
 - Delete
 - Reverse 
-todo
+:todo
 - Quick Sort
 - Merge Sort
 - Greatest tree-recursion 
@@ -58,22 +58,22 @@ todo
 - Next greater element (t*)
 - Stock Span Problem (t*)
 - Impl queue using stack
-todo
-- Sort stack using recursion
+- Sort stack using recursion (t:works on:sorted insert)
+:todo
 - Special Stack that do getMin in O(1)
 - Design a stack with operations on middle element
 - Implement k stacks in a single array?
 
 
 # Queue
-todo
-- Create Queue
+- Create Queue (t*)
+- Find the first circular tour that visits all petrol pumps (t*)
+:todo
+- An Interesting Method to Generate Binary Numbers from 1 to n
+- Implement Stack using queue
 - Priority Queue
 - Deque
-- Implement Stack using queue
-- Find the first circular tour that visits all petrol pumps
-- Maximum of all subarrays of size k
-- An Interesting Method to Generate Binary Numbers from 1 to n
+- Maximum of all subarrays of size k (t*)
 - Implement k Queues in a single array?
 
 # Binary Tree
