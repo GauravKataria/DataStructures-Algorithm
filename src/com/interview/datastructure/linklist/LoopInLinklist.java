@@ -1,12 +1,12 @@
 package com.interview.datastructure.linklist;
 
 public class LoopInLinklist extends LinkList {
-	public void detectloopAndRemove(Node head){
+	public void detectloopAndRemove(NodeList head){
 		if(head==null) {
 			return;
 		}
 			
-		Node slowPtr=head, fastPtr=head;
+		NodeList slowPtr=head, fastPtr=head;
 		
 		while(slowPtr.next!=null && fastPtr.next.next!=null) {
 			
@@ -23,8 +23,8 @@ public class LoopInLinklist extends LinkList {
 		
 	}
 	
-	public void removeLoop(Node fastPtr){
-		Node slowPtr=head;
+	public void removeLoop(NodeList<Integer> fastPtr){
+		NodeList<Integer> slowPtr=head;
 		int intersectionPoint=0;
 		
 		while(slowPtr.next!=null && fastPtr.next!=null) {
@@ -48,11 +48,11 @@ public class LoopInLinklist extends LinkList {
 	public static void main(String[] args) {
 		LoopInLinklist linkList = new LoopInLinklist();
 		
-		Node last = linkList.insertFront(new Node(5));
-		linkList.insertFront(new Node(4));
-		linkList.insertFront(new Node(3));
-		linkList.insertFront(new Node(2));
-		linkList.insertFront(new Node(1));
+		NodeList last = linkList.insertFront(new NodeList(5));
+		linkList.insertFront(new NodeList(4));
+		linkList.insertFront(new NodeList(3));
+		linkList.insertFront(new NodeList(2));
+		linkList.insertFront(new NodeList(1));
 		
 		last.next = linkList.head.next; //loop created		
 		

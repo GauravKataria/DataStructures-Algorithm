@@ -1,11 +1,11 @@
 package com.interview.datastructure.stack;
 
 public class EvaluatePostfix {
-	Stack stack;
+	Stack<Integer> stack;
 	
 	public static void evaluatePostFix(String input){
 		int inputLength = input.length();
-		Stack stack = new Stack();
+		Stack<Integer> stack = new Stack<Integer>();
 		
 		for(int i=0; i<inputLength; i++) {
 			char c = input.charAt(i);

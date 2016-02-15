@@ -2,7 +2,7 @@ package com.interview.datastructure.queue;
 
 public class VisitAllPetrolPumps {
 	public static void visitAllPetrolPump(int []arr){
-		Queue q = new Queue();
+		Queue<Integer> q = new Queue<Integer>();
 		int sum=0;
 		int start=0;
 		
@@ -16,7 +16,7 @@ public class VisitAllPetrolPumps {
 				System.out.println("input not valid");
 			}
 			
-			int val=q.dequeue();
+			int val = q.dequeue();
 			sum=sum+val;
 			if(start==0) start=val;
 			

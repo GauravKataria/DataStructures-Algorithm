@@ -2,7 +2,7 @@ package com.interview.datastructure.stack;
 
 public class NextGreatestElement {
 	public static void nextGreatestElement(int[] arrayInput){
-		Stack s = new Stack();
+		Stack<Integer> s = new Stack<Integer>();
 		
 		s.push(arrayInput[0]);
 		for(int i=1; i<arrayInput.length; i++) {

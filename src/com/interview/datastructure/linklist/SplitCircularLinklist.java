@@ -1,7 +1,7 @@
 package com.interview.datastructure.linklist;
 
 public class SplitCircularLinklist extends CircularLinkList {
-		Node head1, head2;
+		NodeList head1, head2;
 		
 		public void split(){
 			if(head==null){
@@ -13,7 +13,7 @@ public class SplitCircularLinklist extends CircularLinkList {
 				return;
 			}
 			else {
-				Node slowPtr=head, fastPtr=head;
+				NodeList slowPtr=head, fastPtr=head;
 				do{
 					slowPtr=slowPtr.next;
 					fastPtr=fastPtr.next.next;
@@ -31,11 +31,11 @@ public class SplitCircularLinklist extends CircularLinkList {
 		
 		public static void main(String[] args) {
 			SplitCircularLinklist circularLinkList = new SplitCircularLinklist();
-			circularLinkList.insertLast(new Node(1));
-			circularLinkList.insertLast(new Node(2));
-			circularLinkList.insertLast(new Node(3));
-			circularLinkList.insertLast(new Node(4));
-			circularLinkList.insertLast(new Node(5));
+			circularLinkList.insertLast(new NodeList(1));
+			circularLinkList.insertLast(new NodeList(2));
+			circularLinkList.insertLast(new NodeList(3));
+			circularLinkList.insertLast(new NodeList(4));
+			circularLinkList.insertLast(new NodeList(5));
 
 			circularLinkList.printList();
 			System.out.println();

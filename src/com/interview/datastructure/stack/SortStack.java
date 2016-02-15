@@ -1,7 +1,7 @@
 package com.interview.datastructure.stack;
 
 public class SortStack {
-	Stack s = new Stack();
+	Stack<Integer> s = new Stack<Integer>();
 		
 	public void sortStackRecursion() {
 		if(s.linklist.head==null){

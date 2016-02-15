@@ -4,7 +4,7 @@ public class InfixToPostfixConversion {
 	public static void infixtopostfix(String input){
 
 		int inputLength = input.length();
-		Stack stack = new Stack();
+		Stack<Character> stack = new Stack<Character>();
 		
 		for(int i=0; i<inputLength; i++) {
 			char c = input.charAt(i);
@@ -12,21 +12,21 @@ public class InfixToPostfixConversion {
 			if((int)c>=97&&(int)c<=122) {
 				System.out.print(c+" ");
 			}else {
-				if(stack.linklist.head==null){stack.push((int)c);}
+				if(stack.linklist.head==null){stack.push(c);}
 				else{
 					if(c=='('){
 						stack.push(c);
 					}else if(c==')'){
 						while(stack.top()!='('){
-							System.out.print((char)stack.top()+" ");
+							System.out.print(stack.top()+" ");
 							stack.pop();
 						}
 						stack.pop();
-					}else if(pres(c)<pres((char)stack.top())){
+					}else if(pres(c)<pres(stack.top())){
 						do{
-							System.out.print((char)stack.top()+" ");
+							System.out.print(stack.top()+" ");
 							stack.pop();
-						}while(pres(c)<pres((char)stack.top()));
+						}while(pres(c)<pres(stack.top()));
 						stack.push(c);
 					}else {
 						stack.push(c);

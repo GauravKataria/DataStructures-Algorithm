@@ -1,17 +1,17 @@
 package com.interview.datastructure.queue;
 
 import com.interview.datastructure.linklist.LinkList;
-import com.interview.datastructure.linklist.Node;
+import com.interview.datastructure.linklist.NodeList;
 
 public class QueueIneffecientImpl {
 	LinkList linklist = new LinkList();
 	
 	public void enqueue(int data){
-		linklist.insertFront(new Node(data));
+		linklist.insertFront(new NodeList(data));
 	}
 	
 	public void dequeue(){
-		linklist.deleteNode(new Node(front()));
+		linklist.deleteNode(new NodeList(front()));
 	}
 	
 	public void print(){
@@ -19,14 +19,14 @@ public class QueueIneffecientImpl {
 	}
 	
 	public int rear(){
-		return linklist.head.data;
+		return (int) linklist.head.data;
 	}
 	
 	public int front(){
 		if(linklist.head==null){
 			return -1;
 		} else {
-			Node temp = linklist.head;
+			NodeList<Integer> temp = linklist.head;
 			while(temp.next!=null) {
 				temp=temp.next;
 			}

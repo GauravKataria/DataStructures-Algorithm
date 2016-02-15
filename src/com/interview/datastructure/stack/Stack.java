@@ -1,29 +1,32 @@
 package com.interview.datastructure.stack;
 
 import com.interview.datastructure.linklist.LinkList;
-import com.interview.datastructure.linklist.Node;
+import com.interview.datastructure.linklist.NodeList;
 
-public class Stack {
-	LinkList linklist = new LinkList();
+public class Stack<T> {
+	LinkList<T> linklist = new LinkList<T>();
 	int size=0;
 	
-	public void push(int data) {
-		linklist.insertFront(new Node(data));
+	public void push(T node) {
+		linklist.insertFront(new NodeList<T>(node));
 		size+=1;
 	}
 	
-	public void pop() {
+	public T pop() {
+		T top = top();
 		linklist.deleteNode(linklist.head);
 		size-=1;
+		return top;
 	}
 
-	public int top() {
-		if(linklist.head==null) return -1;
-		return linklist.head.data;
+	public T top() {
+		if(linklist.head==null) return null;
+		return (T) linklist.head.data;
 	}
 	
-	public void getStackSize() {
-		System.out.println("Stack size : " + size);
+	public int getSize() {
+		//System.out.println("Stack size : " + size);
+		return size;
 	}
 	
 	public void printStack() {
@@ -31,7 +34,7 @@ public class Stack {
 	}
 	
 	public static void main(String[] args) {
-		Stack stack = new Stack();
+		Stack<Integer> stack = new Stack<Integer>();
 		
 		stack.push(1);
 		stack.push(2);

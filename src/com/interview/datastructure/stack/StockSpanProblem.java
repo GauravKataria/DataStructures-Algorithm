@@ -8,7 +8,7 @@ public class StockSpanProblem {
 	//use of map can be avoided with simple array
 	
 	public static void calculateStockSpan(int []input){
-		Stack s = new Stack();
+		Stack<Integer> s = new Stack<Integer>();
 		
 		s.push(input[0]);
 		System.out.println(s.top()+ " --> 1");

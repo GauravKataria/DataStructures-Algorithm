@@ -1,16 +1,16 @@
 package com.interview.datastructure.linklist;
 
 public class CircularLinkList {
-	Node head = null;
+	NodeList head = null;
 	
-	public void insertLast(Node node){
+	public void insertLast(NodeList node){
 		if(node==null){ return; }
 		
 		if(head==null){ 
 			head=node;
 			head.next=head;
 		}
-		Node temp=head;
+		NodeList temp=head;
 		while(temp.next.data!=head.data){
 			temp=temp.next;
 		}
@@ -19,7 +19,7 @@ public class CircularLinkList {
 	}
 	
 	public void printList(){
-		Node temp = head;
+		NodeList temp = head;
 		
 		if(head==null){
 			System.out.println("list is empty");
@@ -31,8 +31,8 @@ public class CircularLinkList {
 		}while(temp.data!=head.data);	
 	}
 	
-	public void printList(Node node){
-		Node temp = node;
+	public void printList(NodeList node){
+		NodeList temp = node;
 		
 		if(node==null){
 			System.out.println("list is empty");
@@ -46,11 +46,11 @@ public class CircularLinkList {
 	
 	public static void main(String[] args) {
 		CircularLinkList circularLinkList = new CircularLinkList();
-		circularLinkList.insertLast(new Node(1));
-		circularLinkList.insertLast(new Node(2));
-		circularLinkList.insertLast(new Node(3));
-		circularLinkList.insertLast(new Node(4));
-		circularLinkList.insertLast(new Node(5));
+		circularLinkList.insertLast(new NodeList(1));
+		circularLinkList.insertLast(new NodeList(2));
+		circularLinkList.insertLast(new NodeList(3));
+		circularLinkList.insertLast(new NodeList(4));
+		circularLinkList.insertLast(new NodeList(5));
 
 		circularLinkList.printList();
 	}

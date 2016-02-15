@@ -1,37 +1,55 @@
 package com.interview.datastructure.queue;
 
-import com.interview.datastructure.linklist.Node;
+import com.interview.datastructure.linklist.NodeList;
 
-public class Queue {
-	Node front = null, rear = null;
+public class Queue<T> {
+	NodeList<T> front = null, rear = null;
+	int size=0;
 	
-	public void enqueue(int data){
+	public void enqueue(T data){
 		if(front==null && rear==null) {
-			rear=new Node(data);
+			rear=new NodeList<T>(data);
 			front=rear;		// silly mistake if you assign with new node here assign rear as they will point to same memory location
 		} else{
-			rear.next=new Node(data);
+			rear.next=new NodeList<T>(data);
 			rear=rear.next;
 		}
+		size+=1;
 	}
 	
-	public int dequeue(){
+	public T dequeue(){
 		if(front==null && rear==null) {
-			return -1;
+			return null;
 		}else if(front==rear) {
+			T temp=front.data;
 			front=rear=null;
-			return -1;
+			size-=1;
+			return temp;
 		}else {
-			Node temp = front.next;
+			NodeList<T> temp = front.next;
 			front.next=null;
-			int frontData = front.data; 
+			T frontData = front.data; 
 			front=temp;
+			size-=1;
 			return frontData;
 		}
 	}
 	
+	public int size() {
+		return size;
+	}
+	
+	
+	public boolean isEmpty() {
+		if(front==null&&rear==null){
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
 	public void print(){
-		Node temp = front;
+		NodeList<T> temp = front;
 		while(temp!=rear){
 			System.out.print(temp.data + " ");
 			temp = temp.next;
@@ -40,7 +58,7 @@ public class Queue {
 	}
 	
 	public static void main(String[] args) {
-		Queue queue = new Queue();
+		Queue<Integer> queue = new Queue<Integer>();
 		
 		queue.enqueue(1);
 		queue.enqueue(2);

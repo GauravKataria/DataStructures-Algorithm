@@ -6,7 +6,7 @@ public class ReverseLinkList extends LinkList {
 		if(head==null) {
 			return;
 		}
-		Node current = head, prev = null, next = null;
+		NodeList current = head, prev = null, next = null;
 		
 		while(current!=null) {
 			next = current.next;
@@ -18,7 +18,7 @@ public class ReverseLinkList extends LinkList {
 	}
 	
 	//modify this.head does't return actual head
-	public Node reverseRecursive(Node current) {
+	public NodeList reverseRecursive(NodeList current) {
 		if(current==null){
 			return null;
 		}
@@ -26,24 +26,24 @@ public class ReverseLinkList extends LinkList {
 			head = current;
 			return current;
 		}		
-		Node next = current.next;
+		NodeList next = current.next;
 		current.next=null;
-		Node last = reverseRecursive(next);
+		NodeList last = reverseRecursive(next);
 		last.next = current;
 		return current;
 	}
 
 	//return head
-	public Node reverseRecursive1(Node current) {
+	public NodeList reverseRecursive1(NodeList current) {
 		if(current==null){
 			return null;
 		}
 		if(current.next==null){
 			return current;
 		}		
-		Node next = current.next;
+		NodeList next = current.next;
 		current.next=null;
-		Node last = reverseRecursive1(next);
+		NodeList last = reverseRecursive1(next);
 		next.next = current;
 		return last;
 	}
@@ -51,12 +51,12 @@ public class ReverseLinkList extends LinkList {
 	public static void main(String[] args) {
 		ReverseLinkList linkList = new ReverseLinkList();
 		
-		linkList.insertFront(new Node(6));
-		linkList.insertFront(new Node(5));
-		linkList.insertFront(new Node(4));
-		linkList.insertFront(new Node(3));
-		linkList.insertFront(new Node(2));
-		linkList.insertFront(new Node(1));
+		linkList.insertFront(new NodeList(6));
+		linkList.insertFront(new NodeList(5));
+		linkList.insertFront(new NodeList(4));
+		linkList.insertFront(new NodeList(3));
+		linkList.insertFront(new NodeList(2));
+		linkList.insertFront(new NodeList(1));
 		
 		//linkList.reverse();
 		//linkList.reverseRecursive(linkList.head);
